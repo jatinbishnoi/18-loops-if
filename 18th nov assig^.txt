@@ -1,0 +1,213 @@
+1.)
+Conditional statements in programming are used to make decisions based on certain conditions. They allow the execution of different blocks of code depending on whether a specified condition evaluates to true or false. In JavaScript, there are mainly two types of conditional statements: `if` statements and `switch` statements.
+
+### 1. `if` Statements:
+
+Syntax:
+```javascript
+if (condition) {
+  // Code to be executed if the condition is true
+} else {
+  // Code to be executed if the condition is false
+}
+```
+
+Example:
+```javascript
+let x = 10;
+
+if (x > 5) {
+  console.log("x is greater than 5");
+} else {
+  console.log("x is not greater than 5");
+}
+```
+
+### 2. `switch` Statements:
+
+Syntax:
+```javascript
+switch (expression) {
+  case value1:
+    // Code to be executed if expression === value1
+    break;
+  case value2:
+    // Code to be executed if expression === value2
+    break;
+  // ... additional cases
+  default:
+    // Code to be executed if none of the cases match
+}
+```
+
+Example:
+```javascript
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("It's the start of the week.");
+    break;
+  case "Friday":
+    console.log("It's almost the weekend!");
+    break;
+  default:
+    console.log("It's a regular day.");
+}
+```
+
+In the first example, the `if` statement checks whether the variable `x` is greater than 5. If the condition is true, the code inside the first block is executed; otherwise, the code inside the `else` block is executed.
+
+In the second example, the `switch` statement checks the value of the `day` variable and executes the corresponding block of code based on the matched case. If none of the cases match, the code inside the `default` block is executed.
+
+Conditional statements are essential for creating flexible and responsive programs that can adapt to different scenarios based on varying conditions.
+
+2.)
+Certainly! Here's a simple JavaScript program that grades students based on their marks:
+
+```javascript
+function calculateGrade(marks) {
+  if (marks > 90) {
+    return 'A Grade';
+  } else if (marks >= 70 && marks <= 90) {
+    return 'B Grade';
+  } else if (marks >= 50 && marks < 70) {
+    return 'C Grade';
+  } else {
+    return 'F Grade';
+  }
+}
+
+// Example usage:
+const student1Marks = 95;
+const student2Marks = 80;
+const student3Marks = 60;
+
+console.log('Student 1:', calculateGrade(student1Marks));
+console.log('Student 2:', calculateGrade(student2Marks));
+console.log('Student 3:', calculateGrade(student3Marks));
+```
+
+In this program:
+
+- The `calculateGrade` function takes a student's marks as an argument.
+- It uses a series of `if-else if-else` statements to determine the grade based on the given conditions.
+- The grades are determined as follows:
+  - If marks are greater than 90, the grade is 'A'.
+  - If marks are between 70 and 90 (inclusive), the grade is 'B'.
+  - If marks are between 50 and 70 (exclusive), the grade is 'C'.
+  - If marks are below 50, the grade is 'F'.
+
+You can modify the `student1Marks`, `student2Marks`, and `student3Marks` variables with actual student marks to see the corresponding grades for each student.
+
+3.)
+Loops are control structures in programming that allow you to repeatedly execute a block of code while a certain condition is true. They are essential for automating repetitive tasks and iterating over collections of data. In JavaScript, there are mainly three types of loops: `for`, `while`, and `do-while`.
+
+### 1. `for` Loop:
+
+Syntax:
+```javascript
+for (initialization; condition; update) {
+  // Code to be repeated while the condition is true
+}
+```
+
+Example:
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+### 2. `while` Loop:
+
+Syntax:
+```javascript
+while (condition) {
+  // Code to be repeated while the condition is true
+}
+```
+
+Example:
+```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+### 3. `do-while` Loop:
+
+Syntax:
+```javascript
+do {
+  // Code to be repeated at least once, then repeated while the condition is true
+} while (condition);
+```
+
+Example:
+```javascript
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+In the examples:
+
+- The `for` loop initializes a variable `i` to 0, checks whether `i` is less than 5, and increments `i` after each iteration.
+- The `while` loop initializes `i` outside the loop and checks the condition before each iteration.
+- The `do-while` loop is similar to the `while` loop but ensures that the code inside the loop is executed at least once before checking the condition.
+
+Loops are used to iterate over arrays, perform calculations, read files, and execute tasks repeatedly. They provide a way to efficiently handle repetitive operations in a program, reducing the need for redundant code. Each type of loop has its use cases, and the choice of loop depends on the specific requirements of the task at hand.
+
+4.)
+Certainly! You can use a `for` loop to generate numbers between two given numbers. Here's an example in JavaScript:
+
+```javascript
+const num1 = 10;
+const num2 = 25;
+
+console.log('Output:');
+for (let i = num1; i <= num2; i++) {
+  console.log(i);
+}
+```
+
+In this example:
+
+- `num1` and `num2` are the given numbers.
+- The `for` loop starts with the value of `num1`, iterates while `i` is less than or equal to `num2`, and increments `i` after each iteration.
+- The loop prints each value of `i`, generating numbers between `num1` and `num2` (inclusive).
+
+You can adjust the values of `num1` and `num2` in the code to generate numbers between any two given numbers of your choice.
+
+5.)
+Certainly! You can use a `while` loop to print numbers from 1 to 25 in both ascending and descending order. Here's an example in JavaScript:
+
+```javascript
+// Ascending order
+console.log('Ascending Order:');
+let ascendingCounter = 1;
+while (ascendingCounter <= 25) {
+  console.log(ascendingCounter);
+  ascendingCounter++;
+}
+
+// Descending order
+console.log('\nDescending Order:');
+let descendingCounter = 25;
+while (descendingCounter >= 1) {
+  console.log(descendingCounter);
+  descendingCounter--;
+}
+```
+
+In this example:
+
+- The first `while` loop prints numbers in ascending order, starting from 1 and incrementing the counter until it reaches 25.
+- The second `while` loop prints numbers in descending order, starting from 25 and decrementing the counter until it reaches 1.
+
+You can adjust the loop conditions or counters to customize the range and direction of the numbers you want to print.
